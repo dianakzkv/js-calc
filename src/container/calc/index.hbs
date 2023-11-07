@@ -1,0 +1,109 @@
+{{!
+Це код container файлу для index сторінки,
+в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
+}}
+
+<main class='main'>
+  {{>heading title="Calculator" }}
+
+  <div class='calc calc--dark'>
+   
+	<div class='output' id='output'>0
+	</div>
+	
+
+    <div class='buttons'>
+      <button
+        class='button button--grey'
+        onclick="calc.op('%')"
+      >%</button>
+      <button class='button button--grey'><img
+          src='./svg/signs.svg'
+          alt='icon'
+        /></button>
+      <button
+        class='button button--grey'
+        onclick='calc.reset()'
+      >C</button>
+      <button
+        class='button button--blue'
+        onclick="calc.op('/')"
+      >/</button>
+
+      <button
+        class='button button--dark'
+        onclick='calc.add(7)'
+      >7</button>
+      <button
+        class='button button--dark'
+        onclick='calc.add(8)'
+      >8</button>
+      <button
+        class='button button--dark'
+        onclick='calc.add(9)'
+      >9</button>
+      <button
+        class='button button--blue'
+        onclick="calc.op('*')"
+      >x</button>
+
+      <button
+        class='button button--dark'
+        onclick='calc.add(4)'
+      >4</button>
+      <button
+        class='button button--dark'
+        onclick='calc.add(5)'
+      >5</button>
+      <button
+        class='button button--dark'
+        onclick='calc.add(6)'
+      >6</button>
+      <button
+        class='button button--blue'
+        onclick="calc.op('-')"
+      >-</button>
+
+      <button
+        class='button button--dark'
+        onclick='calc.add(1)'
+      >1</button>
+      <button
+        class='button button--dark'
+        onclick='calc.add(2)'
+      >2</button>
+      <button
+        class='button button--dark'
+        onclick='calc.add(3)'
+      >3</button>
+      <button
+        class='button button--blue'
+        onclick="calc.op('+')"
+      >+</button>
+
+      <button
+        class='button button--dark'
+        onclick='calc.dot()'
+      >.</button>
+      <button
+        class='button button--dark'
+        onclick='calc.add(0)'
+      >0</button>
+      <button class='button button--dark'><img
+          src='./svg/delete.svg'
+          alt='icon'
+          onclick='calc.deleteOne()'
+        /></button>
+      <button
+        class='button button--blue'
+        onclick='calc.result()'
+      >=</button>
+    </div>
+
+  </div>
+</main>
+
+{{!
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}

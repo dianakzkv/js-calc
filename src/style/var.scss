@@ -1,11 +1,15 @@
 $colorMap: (
-	light: #ddd,
-	border: #ced4da,
-	dark: #121212,
-	gray: #BDBDBD,
-	main: blue
+  black: #000,
+  white: #fff,
+  dark: #2e2f38,
+  blue: #4b5efc,
+  grey: #4e505f,
+  grey-light: #d2d3da,
+
+  light-theme: #f1f2f3,
+  dark-theme: #17171c,
 );
 
-@function color ($key) {
-	@return map-get($colorMap, $key);
+@function color($key) {
+  @return map-get($colorMap, $key);
 }

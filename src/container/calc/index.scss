@@ -1,0 +1,111 @@
+@use '../../style' as s;
+@use '../../component/heading/index.scss' as heading;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: s.space(7);
+
+  //   background: linear-gradient(
+  //     -135deg,
+  //     #2e2f38,
+  //     #4e505f,
+  //     #d2d3da,
+  //     #f1f2f3
+  //   );
+  background-size: 400% 400%;
+  animation: gradient 15s ease;
+  //   animation: gradient 15s ease infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.calc {
+  width: 350px;
+  //   height: 600px;
+  padding: s.space(5);
+  border-radius: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: s.space(3);
+
+  &--dark {
+    background-color: s.color(dark-theme);
+    color: s.color(white);
+    box-shadow: rgba(0, 0, 0, 0.95) 0px 5px 15px;
+  }
+
+  &--light {
+    background-color: s.color(light-theme);
+    color: s.color(black);
+  }
+}
+
+.output {
+  height: 200px;
+  padding: s.space(2);
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  //   max-width: 310px;
+  word-wrap: break-word;
+  font-size: 64px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-content: center;
+
+  gap: s.space(2) s.space(3);
+}
+
+.button {
+  width: 64px;
+  height: 64px;
+  border-radius: 24px;
+
+  font-size: 24px;
+  color: s.color(white);
+
+  transition: opacity 0.5s;
+
+  &--white {
+    background-color: s.color(white);
+  }
+
+  &--blue {
+    background-color: s.color(blue);
+    color: s.color(white);
+  }
+
+  &--grey {
+    background-color: s.color(grey);
+  }
+
+  &--dark {
+    background-color: s.color(dark);
+  }
+
+  &:hover {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+}
